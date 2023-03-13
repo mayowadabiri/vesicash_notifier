@@ -1,0 +1,4 @@
+/publisher/node_modules/
+/subscriber/node_modules/
+/publisher/.env
+/subscriber/.env
