@@ -1,8 +1,6 @@
 require('dotenv').config();
 import bodyParser from 'body-parser';
 import express, { NextFunction, Request, Response } from 'express';
-import config from './config/config';
-import db from './db';
 import router from './routes';
 
 const app = express();
@@ -22,10 +20,6 @@ app.use((error: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-db.then(() => {
-  app.listen(config.PORT, () => {
-    console.log(`Listening on port ${config.PORT}`);
-  });
-}).catch((error) => {
-  console.log(error);
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
 });
