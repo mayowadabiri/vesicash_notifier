@@ -2,3 +2,4 @@
 /subscriber/node_modules/
 /publisher/.env
 /subscriber/.env
+.DS_Store
